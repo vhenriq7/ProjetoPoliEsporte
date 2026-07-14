@@ -3204,3 +3204,36 @@ main > .final-cta-section:last-child {
   border-radius: 22px;
   box-shadow: 0 22px 60px rgba(0, 0, 0, .1);
 }
+
+}
+
+/* Mapa real incorporado no Google Maps */
+.about-map-embed {
+  position: relative;
+  min-height: clamp(420px, 40vw, 560px);
+  overflow: hidden;
+  background: #eef3f0;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .1);
+}
+
+.about-map-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  display: block;
+}
+
+.about-map-embed::before,
+.about-map-embed::after {
+  content: none;
+}
+
+@media (max-width: 767.98px) {
+  .about-map-embed {
+    min-height: 360px;
+  }
+}
