@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PoliEsporte: centro esportivo com campo, quadra, piscina, pista, sala funcional e arena de areia para reservas e eventos.">
+  <title>PoliEsporte | Início</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top site-navbar">
+    <div class="container-xxl nav-shell">
+      <a class="navbar-brand" href="index.html">Poli<span>Esporte</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu de navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-menu" id="menu">
+        <div class="navbar-nav nav-main align-items-lg-center">
+          <a class="nav-link nav-dot active" aria-current="page" href="index.html">Início</a>
+          <a class="nav-link nav-dot" href="pages/espacos.html">Espaços</a>
+          <a class="nav-link nav-dot" href="pages/agenda.html">Agenda</a>
+          <a class="nav-link nav-dot" href="pages/sobre.html">Sobre</a>
+          <a class="nav-link nav-dot" href="#faq">FAQ</a>
+        </div>
+        <div class="navbar-nav nav-actions align-items-lg-center">
+          <a class="nav-link nav-login" href="pages/login.html">Entrar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="inicio" class="p-0">
+      <div id="carouselHero" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active" aria-label="Fachada da PoliEsporte"></button>
+          <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1" aria-label="Estrutura interna da PoliEsporte"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-slide slide-poliesporte-fachada">
+              <video class="hero-video" autoplay muted loop playsinline poster="img/piscina-projeto-2.jpg">
+                <source src="https://www.pexels.com/download/video/7072343/" type="video/mp4">
+              </video>
+              <div class="carousel-content">
+                <p class="eyebrow">PoliEsporte</p>
+                <h1>Esporte, estrutura e organização.</h1>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                  <a class="btn btn-accent rounded-pill px-4" href="pages/agenda.html">Agendar horário</a>
+                  <a class="btn btn-outline-light rounded-pill px-4" href="pages/espacos.html">Ver espaços</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-slide slide-poliesporte-estrutura">
+              <div class="carousel-content">
+                <p class="eyebrow">Estrutura</p>
+                <h1>Ambientes para treinar e jogar.</h1>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                  <a class="btn btn-accent rounded-pill px-4" href="pages/agenda.html">Agendar horário</a>
+                  <a class="btn btn-outline-light rounded-pill px-4" href="pages/espacos.html">Ver espaços</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="spaces-home">
+      <div class="container-xxl">
+        <div class="spaces-heading">
+          <div>
+            <p class="eyebrow">Nossos espaços</p>
+            <h2>Escolha onde jogar</h2>
+            <p>Seis ambientes para treinos, aulas, partidas e eventos esportivos.</p>
+          </div>
+          <a class="btn btn-accent rounded-pill px-4" href="pages/espacos.html">Ver todos</a>
+        </div>
+        <div class="row g-4 spaces-row">
+          <div class="col-md-6 col-xl-4">
+            <article class="space-card">
+              <a class="image-button" href="pages/campo.html"><img src="img/campo-real.jpg" alt="Campo de futebol"></a>
+              <div class="space-card-body">
+                <small>Futebol</small>
+                <h3>Campo de futebol</h3>
+                <p>Campo para partidas, treinos, amistosos e torneios internos.</p>
+                <a class="btn btn-outline-dark rounded-pill px-4" href="pages/campo.html">Ver detalhes</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="space-card">
+              <a class="image-button" href="pages/quadra.html"><img src="img/quadra-real.jpg" alt="Quadra poliesportiva"></a>
+              <div class="space-card-body">
+                <small>Futsal, vôlei e basquete</small>
+                <h3>Quadra poliesportiva</h3>
+                <p>Ambiente coberto para aulas, jogos e eventos esportivos.</p>
+                <a class="btn btn-outline-dark rounded-pill px-4" href="pages/quadra.html">Ver detalhes</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="space-card">
+              <a class="image-button" href="pages/piscina.html"><img src="img/piscina-real.jpg" alt="Piscina semiolímpica"></a>
+              <div class="space-card-body">
+                <small>Natação</small>
+                <h3>Piscina semiolímpica</h3>
+                <p>Espaço para aulas, treinos e atividades aquáticas acompanhadas.</p>
+                <a class="btn btn-outline-dark rounded-pill px-4" href="pages/piscina.html">Ver detalhes</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="space-card">
+              <a class="image-button" href="pages/pista.html"><img src="img/pista-real.png" alt="Pista de atletismo"></a>
+              <div class="space-card-body">
+                <small>Corrida e preparação</small>
+                <h3>Pista de atletismo</h3>
+                <p>Pista de 100 metros para corrida, aquecimento e preparação física.</p>
+                <a class="btn btn-outline-dark rounded-pill px-4" href="pages/pista.html">Ver detalhes</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="space-card">
+              <a class="image-button" href="pages/funcional.html"><img src="img/funcional-real.png" alt="Sala de treinamento funcional"></a>
+              <div class="space-card-body">
+                <small>Condicionamento</small>
+                <h3>Sala funcional</h3>
+                <p>Ambiente para aulas em grupo, fortalecimento e treino funcional.</p>
+                <a class="btn btn-outline-dark rounded-pill px-4" href="pages/funcional.html">Ver detalhes</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="space-card">
+              <a class="image-button" href="pages/areia.html"><img src="img/areia-real.png" alt="Arena de areia"></a>
+              <div class="space-card-body">
+                <small>Beach tennis e vôlei</small>
+                <h3>Arena de areia</h3>
+                <p>Quadra de areia para beach tennis, vôlei de praia e recreação.</p>
+                <a class="btn btn-outline-dark rounded-pill px-4" href="pages/areia.html">Ver detalhes</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section">
+      <div class="container-xxl">
+        <div class="booking-layout">
+          <div class="booking-copy">
+            <h2>Agende seu horário na <span>PoliEsporte</span></h2>
+            <p>Você escolhe o espaço, envia os dados principais e a equipe confirma disponibilidade, valor e regras pelo contato informado.</p>
+            <a class="btn btn-accent rounded-pill px-4" href="pages/agenda.html">Solicitar reserva</a>
+          </div>
+
+          <div class="booking-steps" aria-label="Etapas para solicitar uma reserva">
+            <div class="booking-step">
+              <span>01</span>
+              <div>
+                <h3>Escolha o espaço</h3>
+                <p>Veja os ambientes disponíveis e selecione o local ideal para sua atividade.</p>
+              </div>
+            </div>
+
+            <div class="booking-step">
+              <span>02</span>
+              <div>
+                <h3>Envie a solicitação</h3>
+                <p>Informe nome, telefone, data, horário e observações importantes.</p>
+              </div>
+            </div>
+
+            <div class="booking-step">
+              <span>03</span>
+              <div>
+                <h3>Aguarde confirmação</h3>
+                <p>A equipe confirma disponibilidade, valor e regras antes da reserva final.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="container-xxl">
+        <div class="testimonials-head">
+          <div>
+            <p class="eyebrow">Avaliações</p>
+            <h2>Quem reserva recomenda</h2>
+          </div>
+          <div class="rating-summary" aria-label="Nota média 4.9 de 5">
+            <strong>4.9</strong>
+            <span>média de atendimento</span>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="testimonial-card">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <p>O processo ficou bem simples. Enviei o pedido pelo site e a equipe confirmou o horário pelo WhatsApp.</p>
+              <strong>Mariana Alves</strong>
+              <span>Reserva de quadra</span>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="testimonial-card">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <p>Conseguimos organizar o treino da turma sem troca de mensagens confusa. Tudo ficou claro antes da confirmação.</p>
+              <strong>Rafael Lima</strong>
+              <span>Campo de futebol</span>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="testimonial-card">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <p>Gostei de ver os espaços antes de solicitar. O retorno foi rápido e o atendimento explicou as regras certinho.</p>
+              <strong>Camila Rocha</strong>
+              <span>Piscina semiolímpica</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-faq-section" id="faq">
+      <div class="container-xxl">
+        <div class="home-faq-layout">
+          <div class="home-faq-copy">
+            <p class="eyebrow">FAQ</p>
+            <h2>Perguntas frequentes</h2>
+            <p class="home-faq-lead">Ainda tem dúvidas? Vamos conversar.</p>
+            <p>Veja as respostas principais sobre solicitação, confirmação e uso dos espaços da PoliEsporte.</p>
+          </div>
+
+          <div class="accordion home-faq-list" id="homeFaqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq1" aria-expanded="false" aria-controls="homeFaq1">
+                  O horário fica confirmado automaticamente?
+                </button>
+              </h3>
+              <div id="homeFaq1" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">Não. O formulário registra a solicitação e a equipe confirma disponibilidade, valor e regras antes da reserva final.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq2" aria-expanded="false" aria-controls="homeFaq2">
+                  Quais espaços posso solicitar?
+                </button>
+              </h3>
+              <div id="homeFaq2" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">Campo, quadra poliesportiva, piscina, pista, sala funcional e arena de areia.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq3" aria-expanded="false" aria-controls="homeFaq3">
+                  O que preciso informar para reservar?
+                </button>
+              </h3>
+              <div id="homeFaq3" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">Nome, telefone, espaço desejado, data, horário, quantidade de pessoas e observações importantes.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#homeFaq4" aria-expanded="false" aria-controls="homeFaq4">
+                  Posso alterar ou cancelar uma solicitação?
+                </button>
+              </h3>
+              <div id="homeFaq4" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">Sim. Entre em contato com a equipe pelo WhatsApp antes do horário para ajustar ou cancelar o pedido.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section">
+      <div class="container-xxl">
+        <div class="final-cta-card">
+          <div>
+            <p class="eyebrow">Próximo passo</p>
+            <h2>Pronto para solicitar seu horário?</h2>
+            <p>Escolha o espaço, envie os dados principais e aguarde o retorno da equipe pelo contato informado.</p>
+          </div>
+          <a class="btn btn-accent rounded-pill px-4" href="pages/agenda.html">Solicitar reserva</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="contato">
+  <div class="container-xxl footer-shell">
+    <div class="footer-main">
+      <div class="footer-info">
+        <a class="footer-logo" href="index.html">Poli<span>Esporte</span></a>
+
+        <div class="footer-block">
+          <h3>Endereço</h3>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+dos+Atletas,+450,+Sao+Paulo,+SP" target="_blank" rel="noopener">Av. dos Atletas, 450 - São Paulo, SP</a>
+        </div>
+
+        <div class="footer-block">
+          <h3>Contato</h3>
+          <a href="https://wa.me/5511945672026" target="_blank" rel="noopener">(11) 94567-2026</a>
+          <a href="mailto:contato@poliesporte.com.br">contato@poliesporte.com.br</a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="index.html">Início</a>
+        <a href="pages/espacos.html">Espaços</a>
+        <a href="pages/agenda.html">Agenda</a>
+        <a href="pages/sobre.html">Sobre</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>PoliEsporte © 2026. Todos os direitos reservados.</span>
+      <div class="footer-legal">
+        <span>Política de atendimento</span>
+        <span>Reservas mediante confirmação</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

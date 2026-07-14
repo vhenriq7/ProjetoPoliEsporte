@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicite uma reserva nos espaços da PoliEsporte e consulte valores, horários e regras de uso.">
+  <title>PoliEsporte | Agenda</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top site-navbar">
+    <div class="container-xxl nav-shell">
+      <a class="navbar-brand" href="../index.html">Poli<span>Esporte</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu de navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-menu" id="menu">
+        <div class="navbar-nav nav-main align-items-lg-center">
+          <a class="nav-link nav-dot" href="../index.html">Início</a>
+          <a class="nav-link nav-dot" href="espacos.html">Espaços</a>
+          <a class="nav-link nav-dot active" aria-current="page" href="agenda.html">Agenda</a>
+          <a class="nav-link nav-dot" href="sobre.html">Sobre</a>
+          <a class="nav-link nav-dot" href="../index.html#faq">FAQ</a>
+        </div>
+        <div class="navbar-nav nav-actions align-items-lg-center">
+          <a class="nav-link nav-login" href="login.html">Entrar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="agenda-page agenda-compact">
+      <div class="container-xxl">
+        <div class="agenda-hero">
+          <div>
+            <p class="eyebrow">Agendamento esportivo</p>
+            <h1>Agende seu horário na <span>PoliEsporte</span></h1>
+            <p>Escolha o espaço, informe seus dados e aguarde a confirmação da equipe pelo contato informado.</p>
+          </div>
+        </div>
+
+        <div class="agenda-form-panel">
+          <div class="alert alert-success alert-dismissible fade show agenda-inline-alert" role="alert">
+            <strong>Como funciona:</strong> escolha o espaço com valor de referência, envie a solicitação e a equipe confirma disponibilidade pelo WhatsApp.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+          </div>
+
+          <div class="agenda-layout">
+            <form class="agenda-form-stack" id="agendaForm" novalidate>
+              <div class="form-field agenda-field">
+                <label class="visually-hidden" for="nome">Nome completo</label>
+                <div class="agenda-input-shell agenda-icon-user">
+                  <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome completo" autocomplete="name" required>
+                </div>
+                <div class="invalid-feedback">Informe nome e sobrenome.</div>
+              </div>
+
+              <div class="form-field agenda-field">
+                <label class="visually-hidden" for="telefone">Telefone / WhatsApp</label>
+                <div class="agenda-input-shell agenda-icon-phone">
+                  <input class="form-control" type="tel" id="telefone" name="telefone" placeholder="Seu número de WhatsApp" autocomplete="tel" required>
+                </div>
+                <div class="invalid-feedback">Informe um telefone com DDD.</div>
+              </div>
+
+              <div class="form-field agenda-field">
+                <label class="visually-hidden" for="email">E-mail</label>
+                <div class="agenda-input-shell agenda-icon-mail">
+                  <input class="form-control" type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+                </div>
+                <div class="invalid-feedback">Informe um e-mail válido.</div>
+              </div>
+
+              <div class="form-field agenda-field">
+                <label class="visually-hidden" for="espaco">Espaço desejado</label>
+                <div class="agenda-input-shell agenda-icon-space">
+                  <select class="form-select" id="espaco" name="espaco" required>
+                    <option value="" selected disabled>Escolha o espaço</option>
+                    <option value="Campo de futebol">Campo de futebol - R$ 120/h</option>
+                    <option value="Quadra poliesportiva">Quadra poliesportiva - R$ 80/h</option>
+                    <option value="Piscina semiolímpica">Piscina semiolímpica - R$ 35/aula</option>
+                    <option value="Pista de atletismo">Pista de atletismo - R$ 40/h</option>
+                    <option value="Sala funcional">Sala funcional - R$ 35/aula</option>
+                    <option value="Arena de areia">Arena de areia - R$ 90/h</option>
+                  </select>
+                </div>
+                <div class="invalid-feedback">Escolha um espaço.</div>
+              </div>
+
+              <div class="agenda-form-pair">
+                <div class="form-field agenda-field">
+                  <label class="visually-hidden" for="data">Data</label>
+                  <div class="agenda-input-shell agenda-icon-calendar">
+                    <input class="form-control" type="date" id="data" name="data" required>
+                  </div>
+                  <div class="invalid-feedback">Escolha uma data.</div>
+                </div>
+
+                <div class="form-field agenda-field">
+                  <label class="visually-hidden" for="hora">Horário</label>
+                  <div class="agenda-input-shell agenda-icon-clock">
+                    <select class="form-select" id="hora" name="hora" required>
+                      <option value="" selected disabled>Horário</option>
+                      <option>08:00</option>
+                      <option>10:00</option>
+                      <option>14:00</option>
+                      <option>16:00</option>
+                      <option>18:00</option>
+                      <option>20:00</option>
+                    </select>
+                  </div>
+                  <div class="invalid-feedback">Escolha um horário.</div>
+                </div>
+              </div>
+
+              <div class="form-field agenda-field">
+                <label class="visually-hidden" for="pessoas">Quantidade de pessoas</label>
+                <div class="agenda-input-shell agenda-icon-users">
+                  <input class="form-control" type="number" id="pessoas" name="pessoas" min="1" max="60" placeholder="Quantidade de pessoas" required>
+                </div>
+                <div class="invalid-feedback">Informe a quantidade.</div>
+              </div>
+
+              <div class="form-field agenda-field">
+                <label class="visually-hidden" for="mensagem">Observação</label>
+                <div class="agenda-input-shell agenda-textarea-shell agenda-icon-message">
+                  <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Observação ou detalhe importante"></textarea>
+                </div>
+              </div>
+
+              <div class="alert d-none form-alert" id="agendaAlert" role="alert"></div>
+
+              <button class="btn btn-accent agenda-submit" type="submit">Enviar solicitação</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="contato">
+  <div class="container-xxl footer-shell">
+    <div class="footer-main">
+      <div class="footer-info">
+        <a class="footer-logo" href="../index.html">Poli<span>Esporte</span></a>
+
+        <div class="footer-block">
+          <h3>Endereço</h3>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+dos+Atletas,+450,+Sao+Paulo,+SP" target="_blank" rel="noopener">Av. dos Atletas, 450 - São Paulo, SP</a>
+        </div>
+
+        <div class="footer-block">
+          <h3>Contato</h3>
+          <a href="https://wa.me/5511945672026" target="_blank" rel="noopener">(11) 94567-2026</a>
+          <a href="mailto:contato@poliesporte.com.br">contato@poliesporte.com.br</a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="../index.html">Início</a>
+        <a href="espacos.html">Espaços</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="../index.html#faq">FAQ</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>PoliEsporte © 2026. Todos os direitos reservados.</span>
+      <div class="footer-legal">
+        <span>Política de atendimento</span>
+        <span>Reservas mediante confirmação</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/forms.js"></script>
+</body>
+</html>

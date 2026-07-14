@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Área do cliente PoliEsporte para acompanhar solicitações de reserva e dados de atendimento.">
+  <title>PoliEsporte | Minha conta</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top site-navbar">
+    <div class="container-xxl nav-shell">
+      <a class="navbar-brand" href="../index.html">Poli<span>Esporte</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menu de navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-menu" id="menu">
+        <div class="navbar-nav nav-main align-items-lg-center">
+          <a class="nav-link nav-dot" href="../index.html">Início</a>
+          <a class="nav-link nav-dot" href="espacos.html">Espaços</a>
+          <a class="nav-link nav-dot" href="agenda.html">Agenda</a>
+          <a class="nav-link nav-dot" href="sobre.html">Sobre</a>
+          <a class="nav-link nav-dot" href="../index.html#faq">FAQ</a>
+        </div>
+        <div class="navbar-nav nav-actions align-items-lg-center">
+          <a class="nav-link nav-login active" aria-current="page" href="minha-conta.html">Minha conta</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="account-page">
+      <div class="container-xxl">
+        <nav class="page-path" aria-label="breadcrumb">
+          <a href="../index.html">Início</a>
+          <span>/</span>
+          <span>Minha conta</span>
+        </nav>
+
+        <div class="account-hero">
+          <div>
+            <p class="eyebrow">Área do cliente</p>
+            <h1>Olá, <span id="accountName">visitante</span></h1>
+            <p>Acompanhe suas solicitações de reserva e veja os próximos passos do atendimento.</p>
+          </div>
+          <a class="btn btn-accent rounded-pill px-4" href="agenda.html">Nova reserva</a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="account-stat">
+              <strong>2</strong>
+              <span>Solicitações</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="account-stat">
+              <strong>1</strong>
+              <span>Aguardando confirmação</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="account-stat">
+              <strong>WhatsApp</strong>
+              <span>Canal de retorno</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="account-layout">
+          <section class="account-panel">
+            <div class="account-panel-head">
+              <h2>Minhas reservas</h2>
+              <span>Simulação</span>
+            </div>
+
+            <article class="reservation-item">
+              <div>
+                <h3>Campo de futebol</h3>
+                <p>Hoje, 18:00. 12 pessoas.</p>
+              </div>
+              <span class="status-pill pending">Aguardando confirmação</span>
+            </article>
+
+            <article class="reservation-item">
+              <div>
+                <h3>Quadra poliesportiva</h3>
+                <p>Sábado, 10:00. 8 pessoas.</p>
+              </div>
+              <span class="status-pill confirmed">Confirmada</span>
+            </article>
+          </section>
+
+          <aside class="account-panel">
+            <div class="account-panel-head">
+              <h2>Dados de atendimento</h2>
+            </div>
+            <ul class="account-list">
+              <li><strong>E-mail:</strong> <span id="accountEmail">nome@email.com</span></li>
+              <li><strong>Telefone:</strong> confirmado pelo cadastro ou agenda</li>
+              <li><strong>Retorno:</strong> segunda a sábado, das 7h às 22h</li>
+            </ul>
+            <a class="btn btn-outline-dark rounded-pill w-100 mt-3" href="#contato">Falar com atendimento</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+  <div class="container-xxl footer-shell">
+    <div class="footer-main">
+      <div class="footer-info">
+        <a class="footer-logo" href="../index.html">Poli<span>Esporte</span></a>
+
+        <div class="footer-block">
+          <h3>Endereço</h3>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+dos+Atletas,+450,+Sao+Paulo,+SP" target="_blank" rel="noopener">Av. dos Atletas, 450 - São Paulo, SP</a>
+        </div>
+
+        <div class="footer-block">
+          <h3>Contato</h3>
+          <a href="https://wa.me/5511945672026" target="_blank" rel="noopener">(11) 94567-2026</a>
+          <a href="mailto:contato@poliesporte.com.br">contato@poliesporte.com.br</a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="../index.html">Início</a>
+        <a href="espacos.html">Espaços</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="../index.html#faq">FAQ</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>PoliEsporte © 2026. Todos os direitos reservados.</span>
+      <div class="footer-legal">
+        <span>Política de atendimento</span>
+        <span>Reservas mediante confirmação</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

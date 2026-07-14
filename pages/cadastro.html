@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crie uma conta na PoliEsporte para acompanhar solicita&ccedil;&otilde;es de reserva e dados de atendimento.">
+  <title>PoliEsporte | Cadastro</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="cadastro-body split-login-body">
+  <main>
+    <section class="split-login-page">
+      <div class="split-brand-panel">
+        <a class="split-back-link" href="../index.html">Poli<span>Esporte</span></a>
+        <div class="split-brand-copy">
+          <p class="eyebrow">Cadastro</p>
+          <h1>Facilite suas pr&oacute;ximas reservas.</h1>
+          <p>Com poucos dados, a equipe consegue confirmar hor&aacute;rios e responder pelo contato correto.</p>
+        </div>
+      </div>
+
+      <div class="split-auth-panel">
+        <div class="split-auth-content">
+          <a class="split-auth-brand" href="../index.html">Poli<span>Esporte</span></a>
+
+          <div class="split-auth-head">
+            <h2>Crie sua conta</h2>
+            <p>Preencha os dados principais para acompanhar suas solicita&ccedil;&otilde;es.</p>
+          </div>
+
+          <div class="alert d-none auth-alert" id="cadastroAlert" role="alert"></div>
+
+          <form class="row g-3" id="cadastroForm" novalidate>
+            <div class="col-12 auth-field">
+              <label class="form-label" for="cadastroNome">Nome completo</label>
+              <input class="form-control" type="text" id="cadastroNome" name="nome" placeholder="Digite seu nome" autocomplete="name" required>
+              <div class="invalid-feedback">Informe seu nome completo.</div>
+            </div>
+            <div class="col-12 auth-field">
+              <label class="form-label" for="cadastroEmail">E-mail</label>
+              <input class="form-control" type="email" id="cadastroEmail" name="email" placeholder="nome@email.com" autocomplete="email" required>
+              <div class="invalid-feedback">Informe um e-mail v&aacute;lido.</div>
+            </div>
+            <div class="col-12 auth-field">
+              <label class="form-label" for="cadastroTelefone">Telefone / WhatsApp</label>
+              <input class="form-control" type="tel" id="cadastroTelefone" name="telefone" placeholder="(11) 91234-5678" autocomplete="tel" required>
+              <div class="invalid-feedback">Informe um telefone v&aacute;lido.</div>
+            </div>
+            <div class="col-12 auth-field">
+              <label class="form-label" for="cadastroSenha">Senha</label>
+              <div class="input-group">
+                <input class="form-control" type="password" id="cadastroSenha" name="senha" placeholder="Deve ter no m&iacute;nimo 6 caracteres" autocomplete="new-password" required>
+                <button class="btn password-toggle" type="button" data-password-toggle="#cadastroSenha">Mostrar</button>
+              </div>
+              <div class="invalid-feedback">A senha precisa ter pelo menos 6 caracteres.</div>
+            </div>
+            <div class="col-12 auth-field">
+              <label class="form-label" for="confirmarSenha">Confirme sua senha</label>
+              <div class="input-group">
+                <input class="form-control" type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Repita sua senha" autocomplete="new-password" required>
+                <button class="btn password-toggle" type="button" data-password-toggle="#confirmarSenha">Mostrar</button>
+              </div>
+              <div class="invalid-feedback">As senhas precisam ser iguais.</div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-accent rounded-pill w-100 py-3" type="submit">Criar conta</button>
+            </div>
+          </form>
+
+          <div class="split-divider"></div>
+
+          <a class="split-create-account" href="login.html">
+            <span>J&aacute; possui uma conta?</span>
+            <strong>Entrar agora</strong>
+          </a>
+
+          <div class="split-auth-links">
+            <a href="../index.html">Voltar ao site</a>
+            <a href="../index.html#contato">Preciso de ajuda</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>
