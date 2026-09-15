@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Solicite uma reserva nos espaços da PoliEsporte e consulte valores, horários e regras de uso.">
+  <meta name="description" content="Demonstração front-end do fluxo de solicitação de reserva da PoliEsporte, com validação de dados no navegador.">
   <title>PoliEsporte | Agenda</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -37,13 +37,13 @@
           <div>
             <p class="eyebrow">Agendamento esportivo</p>
             <h1>Agende seu horário na <span>PoliEsporte</span></h1>
-            <p>Escolha o espaço, informe seus dados e aguarde a confirmação da equipe pelo contato informado.</p>
+            <p>Preencha os dados para testar o fluxo de solicitação desenvolvido para o projeto.</p>
           </div>
         </div>
 
         <div class="agenda-form-panel">
-          <div class="alert alert-success alert-dismissible fade show agenda-inline-alert" role="alert">
-            <strong>Como funciona:</strong> escolha o espaço com valor de referência, envie a solicitação e a equipe confirma disponibilidade pelo WhatsApp.
+          <div class="alert alert-info alert-dismissible fade show agenda-inline-alert" role="alert">
+            <strong>Demonstração acadêmica:</strong> o formulário valida os dados no navegador, mas não envia nem registra reservas nesta versão.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
           </div>
 
@@ -120,7 +120,7 @@
                 <div class="agenda-input-shell agenda-icon-users">
                   <input class="form-control" type="number" id="pessoas" name="pessoas" min="1" max="60" placeholder="Quantidade de pessoas" required>
                 </div>
-                <div class="invalid-feedback">Informe a quantidade.</div>
+                <div class="invalid-feedback">Informe uma quantidade entre 1 e 60 pessoas.</div>
               </div>
 
               <div class="form-field agenda-field">
@@ -130,9 +130,9 @@
                 </div>
               </div>
 
-              <div class="alert d-none form-alert" id="agendaAlert" role="alert"></div>
+              <div class="alert d-none form-alert" id="agendaAlert" role="alert" aria-live="polite"></div>
 
-              <button class="btn btn-accent agenda-submit" type="submit">Enviar solicitação</button>
+              <button class="btn btn-accent agenda-submit" type="submit">Simular solicitação</button>
             </form>
 
           </div>
@@ -177,7 +177,6 @@
   </div>
 </footer>
   <script src="../js/bootstrap.bundle.min.js"></script>
-  <script src="../js/auth.js"></script>
   <script src="../js/forms.js"></script>
 </body>
 </html>

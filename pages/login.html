@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acesse sua conta da PoliEsporte para acompanhar solicita&ccedil;&otilde;es de reserva e dados de atendimento.">
+  <meta name="description" content="Demonstração front-end da área de acesso da PoliEsporte, sem autenticação real em servidor.">
   <title>PoliEsporte | Login</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -14,9 +14,9 @@
       <div class="split-brand-panel">
         <a class="split-back-link" href="../index.html">Poli<span>Esporte</span></a>
         <div class="split-brand-copy">
-          <p class="eyebrow">Reservas esportivas</p>
-          <h1>Entre, acompanhe e confirme suas reservas.</h1>
-          <p>Login simples para consultar solicita&ccedil;&otilde;es, confirmar dados e falar com a equipe.</p>
+          <p class="eyebrow">Área do cliente</p>
+          <h1>Fluxo de acesso em demonstração.</h1>
+          <p>Esta tela apresenta a experiência planejada para uma futura área autenticada do cliente.</p>
         </div>
       </div>
 
@@ -25,17 +25,21 @@
           <a class="split-auth-brand" href="../index.html">Poli<span>Esporte</span></a>
 
           <div class="split-auth-head">
-            <h2>Acesse sua conta</h2>
-            <p>Use o e-mail cadastrado na solicita&ccedil;&atilde;o de reserva.</p>
+            <h2>Acesse a área demonstrativa</h2>
+            <p>Para testar o fluxo, use um e-mail válido e uma senha com pelo menos 6 caracteres.</p>
           </div>
 
-          <div class="alert d-none auth-alert" id="loginAlert" role="alert"></div>
+          <div class="alert alert-info" role="note">
+            <strong>Demonstração:</strong> não há autenticação real, servidor ou banco de usuários nesta versão.
+          </div>
+
+          <div class="alert d-none auth-alert" id="loginAlert" role="alert" aria-live="polite"></div>
 
           <form class="row g-3" id="loginForm" novalidate>
             <div class="col-12 auth-field">
               <label class="form-label" for="email">E-mail</label>
               <input class="form-control" type="email" id="email" name="email" placeholder="nome@email.com" autocomplete="email" required>
-              <div class="invalid-feedback">Informe um e-mail v&aacute;lido.</div>
+              <div class="invalid-feedback">Informe um e-mail válido.</div>
             </div>
             <div class="col-12 auth-field">
               <label class="form-label" for="senha">Senha</label>
@@ -46,24 +50,15 @@
               <div class="invalid-feedback">A senha precisa ter pelo menos 6 caracteres.</div>
             </div>
             <div class="col-12">
-              <div class="auth-options">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="lembrar">
-                  <label class="form-check-label" for="lembrar">Lembrar acesso</label>
-                </div>
-                <a class="split-forgot-link" href="../index.html#contato">Esqueci minha senha</a>
-              </div>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-accent rounded-pill w-100 py-3" type="submit">Entrar</button>
+              <button class="btn btn-accent rounded-pill w-100 py-3" type="submit">Testar acesso</button>
             </div>
           </form>
 
           <div class="split-divider"></div>
 
           <a class="split-create-account" href="cadastro.html">
-            <span>N&atilde;o tem uma conta?</span>
-            <strong>Criar cadastro</strong>
+            <span>Quer testar o outro fluxo?</span>
+            <strong>Simular cadastro</strong>
           </a>
 
           <div class="split-auth-links">
