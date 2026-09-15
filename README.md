@@ -1,108 +1,141 @@
 # PoliEsporte
 
-Projeto acadêmico de desenvolvimento web criado durante o curso Técnico em Informática para Web, na disciplina de Programação Web.
+Projeto acadêmico de desenvolvimento web criado durante o curso **Técnico em Informática para Web**, na disciplina de **Programação Web**.
 
-A proposta do trabalho era desenvolver um site para uma empresa fictícia aplicando, de forma prática, os conteúdos estudados ao longo da disciplina. A ideia da PoliEsporte surgiu em conjunto com outro projeto acadêmico de Comércio Eletrônico e Marketing, no qual foi pensada uma empresa voltada à oferta de diferentes modalidades esportivas em um mesmo espaço.
+A proposta era desenvolver o site de uma empresa fictícia aplicando, em um projeto completo, os conteúdos trabalhados durante a disciplina. A ideia da PoliEsporte também foi aproveitada em uma atividade de **Comércio Eletrônico e Marketing**, na qual foi concebida uma empresa capaz de reunir diferentes modalidades esportivas em um único espaço.
 
-O projeto foi posteriormente revisado e aprimorado por iniciativa própria, com ajustes de layout, navegação, formulários e experiência de uso.
+A implementação técnica deste repositório foi realizada por mim e, após a entrega acadêmica, o projeto continuou sendo revisado e aprimorado por iniciativa própria.
+
+> **Status:** projeto front-end demonstrativo em evolução.
 
 ## Demonstração
 
-Site publicado no GitHub Pages:
+**Site publicado:** https://vhenriq7.github.io/ProjetoPoliEsporte/
 
-https://vhenriq7.github.io/ProjetoPoliEsporte/
-
-## Tecnologias utilizadas
+## Tecnologias
 
 - HTML5
 - CSS3
 - JavaScript
 - Bootstrap
-- LocalStorage
+- Web Storage API (`localStorage`)
 - Git
 - GitHub
 - GitHub Pages
 
-## Funcionalidades
+## Principais funcionalidades
 
-- Página inicial com apresentação da empresa e dos espaços esportivos
-- Navegação entre múltiplas páginas
-- Catálogo de espaços esportivos
-- Páginas específicas para campo, quadra, piscina, pista, sala funcional e arena de areia
-- Formulário de solicitação de reserva
-- Validação de campos em JavaScript
-- Bloqueio de seleção de datas anteriores à data atual
-- Cadastro e login demonstrativos no front-end
-- Persistência de nome e e-mail do usuário com LocalStorage
-- Área "Minha conta" com dados demonstrativos
-- Layout responsivo com Bootstrap
-- Publicação do projeto com GitHub Pages
+- página inicial com apresentação da proposta e dos espaços esportivos;
+- navegação multipágina;
+- catálogo de espaços esportivos;
+- páginas específicas para campo, quadra, piscina, pista, sala funcional e arena de areia;
+- formulário de solicitação de reserva;
+- validação de campos com JavaScript;
+- bloqueio de datas anteriores à data atual;
+- cadastro e login demonstrativos no front-end;
+- persistência demonstrativa de nome e e-mail utilizando `localStorage`;
+- área **Minha conta** com dados de exemplo;
+- layout responsivo com Bootstrap e CSS personalizado;
+- deploy estático pelo GitHub Pages.
 
-## Estrutura do projeto
+## Arquitetura do projeto
+
+O PoliEsporte foi desenvolvido como uma aplicação **front-end multipágina**, sem framework JavaScript e sem back-end nesta versão.
 
 ```text
 ProjetoPoliEsporte/
-├── css/        # Bootstrap e estilos personalizados
-├── img/        # Imagens utilizadas no projeto
-├── js/         # Scripts de formulários, cadastro e login
-├── pages/      # Páginas internas da aplicação
-├── index.html  # Página inicial
+├── css/
+│   ├── bootstrap.min.css   # Bootstrap utilizado localmente
+│   └── style.css           # Estilos próprios do projeto
+├── img/                    # Imagens e recursos visuais
+├── js/
+│   ├── auth.js             # Cadastro, login e estado demonstrativo do usuário
+│   ├── forms.js            # Validação do formulário de reserva
+│   └── bootstrap.bundle.min.js
+├── pages/                  # Páginas internas
+├── index.html              # Página inicial
 └── README.md
 ```
+
+### Organização do JavaScript
+
+O JavaScript foi separado por responsabilidade:
+
+- `forms.js`: valida os dados do formulário de reserva, formata e verifica entradas e impede a seleção de datas passadas;
+- `auth.js`: controla as validações das telas de cadastro e login, exibição de senha, formatação de telefone e persistência demonstrativa de dados do usuário no navegador.
+
+Essa separação mantém as regras dos formulários isoladas das regras do fluxo demonstrativo de autenticação.
 
 ## Implementação técnica
 
 ### Formulário de reserva
 
-O formulário de agenda utiliza JavaScript para validar os dados informados pelo usuário, incluindo nome, telefone, e-mail, espaço escolhido, data, horário e quantidade de pessoas. O campo de data também impede a seleção de datas anteriores ao dia atual.
+O formulário de agenda valida nome, telefone, e-mail, espaço escolhido, data, horário e quantidade de pessoas. O campo de data recebe dinamicamente o dia atual como valor mínimo, evitando solicitações para datas anteriores.
 
-Nesta versão, o envio representa uma simulação front-end da solicitação. Não há integração com back-end, banco de dados ou sistema de pagamento.
+Nesta versão, o envio representa uma **simulação front-end** da solicitação. Não existe integração com servidor, banco de dados ou sistema de pagamento.
 
 ### Cadastro e login
 
-As telas de cadastro e login foram implementadas como uma demonstração de fluxo de autenticação no front-end. O JavaScript realiza validações de campos, formatação de telefone, comparação de senhas e controle de exibição da senha.
+As telas de cadastro e login representam o fluxo de uma futura área do cliente. O JavaScript realiza validação de e-mail e senha, comparação das senhas no cadastro, formatação de telefone e controle de exibição da senha.
 
-O nome e o e-mail são armazenados no `localStorage` do navegador para demonstrar a persistência de dados na área "Minha conta".
+Nome e e-mail são armazenados no `localStorage` para demonstrar persistência de estado entre as telas e preencher a área **Minha conta**.
 
-> Importante: o projeto não possui autenticação real em servidor nem banco de dados de usuários.
+> O projeto não possui autenticação real. Senhas e usuários não são persistidos em servidor ou banco de dados.
 
-## Contexto do projeto
+### Responsividade
 
-O PoliEsporte foi desenvolvido a partir de duas atividades acadêmicas relacionadas.
+O projeto utiliza o sistema de grid e componentes responsivos do Bootstrap em conjunto com estilos próprios em `style.css`, permitindo adaptação das páginas para diferentes larguras de tela.
 
-Na disciplina de Programação Web, o objetivo era criar o site de uma empresa fictícia utilizando os conhecimentos adquiridos durante o curso técnico.
+### Deploy
 
-Em paralelo, em uma atividade de Comércio Eletrônico e Marketing, foi desenvolvida a proposta de uma empresa que reunisse diferentes modalidades esportivas em um único local. A ideia considerava a dificuldade de encontrar estruturas desse tipo em cidades menores.
+A aplicação é totalmente estática e está publicada por meio do **GitHub Pages**, diretamente a partir do repositório.
 
-A mesma proposta de negócio foi utilizada como base para o desenvolvimento do site, permitindo aplicar o conteúdo técnico de Programação Web em um projeto com um contexto de uso definido.
+## Contexto acadêmico
+
+O projeto nasceu na disciplina de **Programação Web**, durante o curso Técnico em Informática para Web. A atividade propunha a criação de um site para uma empresa fictícia, aplicando os conhecimentos estudados ao longo da formação.
+
+A proposta da empresa veio de outra atividade acadêmica, de **Comércio Eletrônico e Marketing**. A ideia era estruturar um negócio do zero e, considerando a realidade de cidades menores, surgiu a proposta de um centro que reunisse diferentes modalidades esportivas, aulas e locação de espaços em um único local.
+
+Com isso, a mesma ideia de negócio serviu como contexto para o desenvolvimento do site, conectando a proposta comercial ao trabalho técnico de Programação Web.
+
+## Evolução após a entrega
+
+Depois da versão apresentada no curso, continuei trabalhando no projeto por conta própria. Entre as revisões realizadas estão ajustes de layout, navegação, responsividade, formulários, validações, área do usuário e experiência de uso.
+
+Hoje o projeto também funciona como parte do meu portfólio e como base para praticar a evolução de um front-end estático para uma aplicação mais completa.
 
 ## Limitações atuais
 
-O projeto atualmente funciona como uma aplicação front-end demonstrativa. Alguns fluxos representam como o sistema poderia funcionar em uma aplicação completa, mas ainda não possuem processamento em servidor.
+A versão publicada é propositalmente front-end. Portanto, alguns fluxos demonstram a experiência planejada, mas ainda não executam processamento no servidor.
 
-Entre as limitações atuais estão:
+Atualmente não há:
 
-- ausência de back-end
-- ausência de banco de dados
-- autenticação apenas demonstrativa
-- reservas sem persistência real
-- ausência de confirmação automática de disponibilidade
-- ausência de processamento de pagamentos
+- back-end;
+- banco de dados;
+- autenticação real;
+- persistência real das reservas;
+- consulta de disponibilidade em tempo real;
+- confirmação automática de agendamento;
+- processamento de pagamentos.
 
-## Próximas melhorias
+## Roadmap
 
-Pretendo evoluir o projeto gradualmente para uma aplicação mais completa, incluindo:
+Próximas evoluções planejadas:
 
-- criação de um back-end
-- desenvolvimento de uma API REST
-- integração com banco de dados
-- autenticação real de usuários
-- persistência das reservas
-- controle de disponibilidade de horários
-- confirmação de agendamentos pelo próprio sistema
-- histórico real de reservas por usuário
-- integração com meios de pagamento
-- melhorias de layout, tipografia e experiência do usuário
+- [ ] criar back-end para o sistema de reservas;
+- [ ] desenvolver uma API REST;
+- [ ] integrar banco de dados;
+- [ ] implementar autenticação de usuários;
+- [ ] persistir reservas e histórico por usuário;
+- [ ] criar controle de disponibilidade de horários;
+- [ ] permitir confirmação do agendamento pelo próprio sistema;
+- [ ] integrar meio de pagamento;
+- [ ] revisar tipografia e detalhes de interface;
+- [ ] continuar melhorando acessibilidade e experiência do usuário.
+
+## Observação sobre o conteúdo
+
+A **PoliEsporte é uma empresa fictícia criada para fins acadêmicos**. Dados comerciais, contatos, endereço, avaliações e demais informações apresentadas no site fazem parte da simulação do projeto.
 
 ## Autor
 
