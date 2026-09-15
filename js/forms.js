@@ -53,15 +53,22 @@
     return value.replace(/\D/g, "");
   }
 
-  function formatDate(value) {
-    if (!value) {
-      return "Não selecionada";
+  function formatPhone(value) {
+    var numbers = onlyNumbers(value).slice(0, 11);
+
+    if (numbers.length <= 2) {
+      return numbers;
     }
-    var parts = value.split("-");
-    if (parts.length !== 3) {
-      return value;
+
+    if (numbers.length <= 6) {
+      return "(" + numbers.slice(0, 2) + ") " + numbers.slice(2);
     }
-    return parts[2] + "/" + parts[1] + "/" + parts[0];
+
+    if (numbers.length <= 10) {
+      return "(" + numbers.slice(0, 2) + ") " + numbers.slice(2, 6) + "-" + numbers.slice(6);
+    }
+
+    return "(" + numbers.slice(0, 2) + ") " + numbers.slice(2, 7) + "-" + numbers.slice(7);
   }
 
   function setTodayMin(input) {
@@ -92,6 +99,10 @@
 
     setTodayMin(data);
 
+    telefone.addEventListener("input", function () {
+      telefone.value = formatPhone(telefone.value);
+    });
+
     [nome, telefone, email, espaco, data, hora, pessoas].forEach(function (control) {
       control.addEventListener("input", function () {
         clearField(control);
@@ -112,7 +123,8 @@
         markValid(nome);
       }
 
-      if (onlyNumbers(telefone.value).length < 10) {
+      var telefoneNumeros = onlyNumbers(telefone.value);
+      if (telefoneNumeros.length < 10 || telefoneNumeros.length > 11) {
         markInvalid(telefone, "Informe um telefone com DDD.");
         valid = false;
       } else {
@@ -150,21 +162,25 @@
         markValid(hora);
       }
 
-      if (!pessoas.value || Number(pessoas.value) < 1) {
-        markInvalid(pessoas, "Informe a quantidade de pessoas.");
+      var quantidadePessoas = Number(pessoas.value);
+      if (!pessoas.value || quantidadePessoas < 1 || quantidadePessoas > 60) {
+        markInvalid(pessoas, "Informe uma quantidade entre 1 e 60 pessoas.");
         valid = false;
       } else {
         markValid(pessoas);
       }
 
       if (!valid) {
-        showAlert(alert, "danger", "Revise os campos destacados antes de enviar.");
+        showAlert(alert, "danger", "Revise os campos destacados antes de continuar.");
         return;
       }
 
-      showAlert(alert, "success", "Solicitação registrada na tela. A equipe retornará pelo WhatsApp informado.");
+      showAlert(
+        alert,
+        "success",
+        "Simulação concluída: os dados foram validados no navegador, mas não são enviados ou registrados nesta versão do projeto."
+      );
     });
-
   }
 
   setupAgendaForm();
