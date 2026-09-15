@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Área do cliente PoliEsporte para acompanhar solicitações de reserva e dados de atendimento.">
+  <meta name="description" content="Área demonstrativa do cliente PoliEsporte, com dados locais e exemplos de solicitações de reserva.">
   <title>PoliEsporte | Minha conta</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -41,30 +41,34 @@
 
         <div class="account-hero">
           <div>
-            <p class="eyebrow">Área do cliente</p>
+            <p class="eyebrow">Área demonstrativa</p>
             <h1>Olá, <span id="accountName">visitante</span></h1>
-            <p>Acompanhe suas solicitações de reserva e veja os próximos passos do atendimento.</p>
+            <p>Visualize como funcionaria o acompanhamento de solicitações em uma futura versão completa da aplicação.</p>
           </div>
-          <a class="btn btn-accent rounded-pill px-4" href="agenda.html">Nova reserva</a>
+          <a class="btn btn-accent rounded-pill px-4" href="agenda.html">Nova simulação</a>
+        </div>
+
+        <div class="alert alert-info" role="note">
+          <strong>Demonstração acadêmica:</strong> as reservas abaixo são exemplos. Nome e e-mail podem ser preenchidos a partir do <code>localStorage</code> do navegador; não há conta, autenticação ou reservas persistidas em servidor.
         </div>
 
         <div class="row g-4">
           <div class="col-md-4">
             <div class="account-stat">
               <strong>2</strong>
-              <span>Solicitações</span>
+              <span>Solicitações de exemplo</span>
             </div>
           </div>
           <div class="col-md-4">
             <div class="account-stat">
               <strong>1</strong>
-              <span>Aguardando confirmação</span>
+              <span>Exemplo aguardando confirmação</span>
             </div>
           </div>
           <div class="col-md-4">
             <div class="account-stat">
-              <strong>WhatsApp</strong>
-              <span>Canal de retorno</span>
+              <strong>Demo</strong>
+              <span>Fluxo somente no front-end</span>
             </div>
           </div>
         </div>
@@ -73,7 +77,7 @@
           <section class="account-panel">
             <div class="account-panel-head">
               <h2>Minhas reservas</h2>
-              <span>Simulação</span>
+              <span>Dados de exemplo</span>
             </div>
 
             <article class="reservation-item">
@@ -95,14 +99,14 @@
 
           <aside class="account-panel">
             <div class="account-panel-head">
-              <h2>Dados de atendimento</h2>
+              <h2>Dados demonstrativos</h2>
             </div>
             <ul class="account-list">
               <li><strong>E-mail:</strong> <span id="accountEmail">nome@email.com</span></li>
-              <li><strong>Telefone:</strong> confirmado pelo cadastro ou agenda</li>
-              <li><strong>Retorno:</strong> segunda a sábado, das 7h às 22h</li>
+              <li><strong>Origem:</strong> dados locais do navegador</li>
+              <li><strong>Persistência:</strong> somente <code>localStorage</code></li>
             </ul>
-            <a class="btn btn-outline-dark rounded-pill w-100 mt-3" href="#contato">Falar com atendimento</a>
+            <a class="btn btn-outline-dark rounded-pill w-100 mt-3" href="agenda.html">Testar formulário de agenda</a>
           </aside>
         </div>
       </div>
@@ -139,8 +143,8 @@
     <div class="footer-bottom">
       <span>PoliEsporte © 2026. Todos os direitos reservados.</span>
       <div class="footer-legal">
-        <span>Política de atendimento</span>
-        <span>Reservas mediante confirmação</span>
+        <span>Projeto acadêmico</span>
+        <span>Conteúdo demonstrativo</span>
       </div>
     </div>
   </div>
