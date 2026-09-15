@@ -69,18 +69,6 @@
     return "(" + numbers.slice(0, 2) + ") " + numbers.slice(2, 7) + "-" + numbers.slice(7);
   }
 
-  function resetPasswordToggles(scope) {
-    scope.querySelectorAll("[data-password-toggle]").forEach(function (button) {
-      var input = document.querySelector(button.getAttribute("data-password-toggle"));
-      if (!input) {
-        return;
-      }
-      input.type = "password";
-      button.textContent = "Mostrar";
-      button.setAttribute("aria-label", "Mostrar senha");
-    });
-  }
-
   document.querySelectorAll("[data-password-toggle]").forEach(function (button) {
     var input = document.querySelector(button.getAttribute("data-password-toggle"));
     if (!input) {
@@ -121,7 +109,7 @@
       var valid = true;
 
       if (!isEmailValid(email)) {
-        markInvalid(email, "Informe um e-mail v\u00e1lido.");
+        markInvalid(email, "Informe um e-mail válido.");
         valid = false;
       } else {
         markValid(email);
@@ -141,7 +129,7 @@
 
       localStorage.setItem("poliesporteUserName", "cliente");
       localStorage.setItem("poliesporteUserEmail", email.value.trim());
-      showAlert(loginAlert, "success", "Acesso validado. Redirecionando para sua área.");
+      showAlert(loginAlert, "success", "Fluxo demonstrativo validado. Redirecionando para a área simulada.");
       setTimeout(function () {
         window.location.href = "minha-conta.html";
       }, 700);
@@ -168,7 +156,8 @@
         markValid(nome);
       }
 
-      if (telefone && onlyNumbers(telefone.value).length < 10) {
+      var telefoneNumeros = telefone ? onlyNumbers(telefone.value) : "";
+      if (telefone && (telefoneNumeros.length < 10 || telefoneNumeros.length > 11)) {
         markInvalid(telefone, "Informe um telefone com DDD.");
         valid = false;
       } else if (telefone) {
@@ -176,7 +165,7 @@
       }
 
       if (!isEmailValid(email)) {
-        markInvalid(email, "Informe um e-mail v\u00e1lido.");
+        markInvalid(email, "Informe um e-mail válido.");
         valid = false;
       } else {
         markValid(email);
@@ -197,13 +186,13 @@
       }
 
       if (!valid) {
-        showAlert(cadastroAlert, "danger", "Revise os campos destacados antes de criar o cadastro.");
+        showAlert(cadastroAlert, "danger", "Revise os campos destacados antes de continuar.");
         return;
       }
 
       localStorage.setItem("poliesporteUserName", nome.value.trim().split(/\s+/)[0]);
       localStorage.setItem("poliesporteUserEmail", email.value.trim());
-      showAlert(cadastroAlert, "success", "Cadastro validado. Redirecionando para sua área.");
+      showAlert(cadastroAlert, "success", "Cadastro demonstrativo validado. Redirecionando para a área simulada.");
       setTimeout(function () {
         window.location.href = "minha-conta.html";
       }, 700);
